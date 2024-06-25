@@ -1,0 +1,11 @@
+body{
+	background-color:#f1f1f1;
+}
+#btentrar,#btliberar,#topohead,#consultarareceber{
+background-color:#7CCD7C;
+}
+#mensagem{
+	color:#2e466d;
+	font-size:22px;
+	text-align:center;
+}
