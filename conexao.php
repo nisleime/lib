@@ -1,6 +1,6 @@
 <?php
 try	{
-	$dbh = new PDO ( "mysql:host=149.56.250.246;port=3306;dbname=ativa;charset=utf8", "root", "Ncm@647534",array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));	
+	$dbh = new PDO ( "mysql:host=172.20.0.4;port=3306;dbname=ativa;charset=utf8", "root", "Ncm@647534",array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));	
 
 /*$dbh = new PDO ( "mysql:host=remotemysql.com;dbname=a8jRiePG4R;charset=utf8", "a8jRiePG4R", "pczYGq1lnT",array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));*/
 
