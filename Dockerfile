@@ -4,6 +4,11 @@ FROM php:8.1-cli
 # Defina o diretório de trabalho no contêiner
 WORKDIR /var/www/html
 
+# Instale dependências necessárias e extensões PHP
+RUN apt-get update && \
+    apt-get install -y libpq-dev libzip-dev unzip && \
+    docker-php-ext-install pdo pdo_mysql
+
 # Copie os arquivos do projeto para o contêiner
 COPY . .
 
