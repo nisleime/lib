@@ -1,12 +1,14 @@
-# Use the official PHP image as base
-FROM php:8.1-apache
+# Use a imagem oficial do PHP
+FROM php:8.1-cli
 
-# Enable Apache mod_rewrite
-RUN a2enmod rewrite
+# Defina o diretório de trabalho no contêiner
+WORKDIR /var/www/html
 
-# Install necessary PHP extensions
-RUN docker-php-ext-install mysqli pdo pdo_mysql
+# Copie os arquivos do projeto para o contêiner
+COPY . .
 
+# Exponha a porta que o servidor embutido do PHP vai usar
+EXPOSE 8000
 
-# Set permissions for the Apache document root
-RUN chown -R www-data:www-data /var/www/html
+# Comando para rodar o servidor embutido do PHP
+CMD [ "php", "-S", "0.0.0.0:8000", "-t", "/var/www/html" ]
